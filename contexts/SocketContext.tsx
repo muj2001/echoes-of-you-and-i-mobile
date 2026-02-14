@@ -17,8 +17,9 @@ import React, {
 } from 'react';
 import { io, Socket } from 'socket.io-client';
 import { useAuth } from './AuthContext';
+import { config } from '@/lib/config';
 
-const SOCKET_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000';
+const SOCKET_URL = config.apiUrl;
 
 export interface PartnerStatus {
   isListening: boolean;

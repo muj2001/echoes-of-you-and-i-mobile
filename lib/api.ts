@@ -4,8 +4,9 @@
  * All endpoints require spotifyId for authentication
  */
 
-// Use environment variable or default to local development
-const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000';
+import { config } from './config';
+
+const API_URL = config.apiUrl;
 
 export interface User {
   id: string;
